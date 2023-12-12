@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+#logo-container {
+  max-width: 30px; /* Logo maksimum genişlik */
+  margin: 10px; /* Logo kenar boşluğu */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo {
+  width: 1%; /* Logo genişliği %100 olacak şekilde ayarlandı */
+  height: auto; /* Oranları korumak için */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: Arial, sans-serif; /* Varsayılan font belirlendi */
+  background-color: #f4f4f4; /* Arka plan rengi belirlendi */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background-color: #333; /* Navigasyon arka plan rengi */
+}
+
+ul.horizontal-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+ul.horizontal-list li {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul.horizontal-list li:hover {
+  background-color: #555;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1, h2, h3 {
+  color: #333; /* Başlık renkleri */
+}
+
+.content {
+  max-width: 800px; /* İçerik maksimum genişlik */
+  margin: 0 auto; /* İçerik ortalanır */
+}
+
+.product-card {
+  border: 1px solid #ddd; /* Ürün kartı kenarlık rengi */
+  padding: 10px; /* Ürün kartı iç boşluğu */
+  margin: 10px; /* Ürün kartı dış boşluğu */
+  text-align: center;
+}
+
+footer {
+  background-color: #333; /* Alt bilgi arka plan rengi */
+  color: white; /* Alt bilgi yazı rengi */
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Diğer stil tanımlamaları eklenebilir */
+
+/* Eklenen stil tanımlamaları */
+#logo-container {
+  max-width: 30px; /* Logo maksimum genişlik */
+  margin: 10px; /* Logo kenar boşluğu */
+}
+
+#logo {
+  width: 10%; /* Logo genişliği %100 olacak şekilde ayarlandı */
+  height: auto; /* Oranları korumak için */
 }
