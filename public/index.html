@@ -1,43 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Gallery</title>
+</head>
+<body>
+    <nav>
+        <ul class="horizontal-list">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <h1>Product Gallery</h1>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <a href="#" id="logo-container">
+        <img src="images/logo.png" alt="Logo" id="logo">
+    </a>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <div id="buttons">
+        <button id="showAllButton">Show All</button>
+        <button id="sneakersButton">Sneakers</button>
+        <button id="bootsButton">Boots</button>
+        <button id="sandalsButton">Sandals</button>
+        <button id="sortByNameButton">Sort by Name</button>
+        <button id="sortByPriceButton">Sort by Price</button>
+    </div>
+
+    <section class="content">
+        <h2>Welcome to Our E-Commerce Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac feugiat purus. Curabitur convallis massa nec vestibulum. Nam eget urna vehicula, facilisis massa eu, fermentum libero. Donec dignissim bibendum felis, ac vestibulum enim malesuada eget.</p>
+
+        <h3>Our Products</h3>
+        <p>Check out our wide range of products. We offer the best quality and great deals on all items. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <h3>Why Choose Us?</h3>
+        <p>We take pride in our excellent customer service and high-quality products. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada bibendum arcu, nec bibendum tortor cursus eu.</p>
+    </section>
+
+    <div id="gallery">
+        <!-- Products will be displayed here -->
+        <div class="product-card">
+            <img src="images/sneakers.png" alt="Stylish Sneakers">
+            <h2>Stylish Sneakers</h2>
+            <p>Category: Sneakers</p>
+            <p>Price: $50</p>
+            <button onclick="addToCart('Stylish Sneakers', 50)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/sneaker2.png" alt="Sneaker 2">
+            <h2>Sneaker 2</h2>
+            <p>Category: Sneakers</p>
+            <p>Price: $70</p>
+            <button onclick="addToCart('Sneaker 2', 70)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/sneaker3.png" alt="Sneaker 3">
+            <h2>Sneaker 3</h2>
+            <p>Category: Sneakers</p>
+            <p>Price: $35</p>
+            <button onclick="addToCart('Sneaker 3', 35)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/sneaker4.png" alt="Sneaker 4">
+            <h2>Sneaker 4</h2>
+            <p>Category: Sneakers</p>
+            <p>Price: $39</p>
+            <button onclick="addToCart('Sneaker 4', 39)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/boot2.jpg" alt="Boot 2">
+            <h2>Boot 2</h2>
+            <p>Category: Boots</p>
+            <p>Price: $110</p>
+            <button onclick="addToCart('Boot 2', 110)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/boot3.png" alt="Boot 3">
+            <h2>Boot 3</h2>
+            <p>Category: Boots</p>
+            <p>Price: $125</p>
+            <button onclick="addToCart('Boot 3', 125)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/boot4.png" alt="Boot 4">
+            <h2>Boot 4</h2>
+            <p>Category: Boots</p>
+            <p>Price: $135</p>
+            <button onclick="addToCart('Boot 4', 135)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/sandal2.jpg" alt="Sandal 2">
+            <h2>Sandal 2</h2>
+            <p>Category: Sandals</p>
+            <p>Price: $68</p>
+            <button onclick="addToCart('Sandal 2', 68)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/sandal3.jpg" alt="Sandal 3">
+            <h2>Sandal 3</h2>
+            <p>Category: Sandals</p>
+            <p>Price: $78</p>
+            <button onclick="addToCart('Sandal 3', 78)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/sandal4.jpg" alt="Sandal 4">
+            <h2>Sandal 4</h2>
+            <p>Category: Sandals</p>
+            <p>Price: $88</p>
+            <button onclick="addToCart('Sandal 4', 88)">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { name: 'Stylish Sneakers', category: 'Sneakers', price: 50, image:"images/sneakers.png" },
+            { name: 'Sneaker 2', category: 'Sneakers', price: 70, image:"images/sneaker2.png" },
+            { name: 'Sneaker 3', category: 'Sneakers', price: 35, image:"images/sneaker3.png" },
+            { name: 'Sneaker 4', category: 'Sneakers', price: 39, image:"images/sneaker4.png" },
+            { name: '             Classic Boots', category: 'Boots', price: 59.99, image:"images/boots.png" },
+            { name: 'Boot 2', category: 'Boots', price: 110, image:"images/boot2.png" },
+            { name: 'Boot 3', category: 'Boots', price: 125, image:"images/boot3.png" },
+            { name: 'Boot 4', category: 'Boots', price: 135, image:"images/boot4.png" },
+            { name: 'Casual Sandals', category: 'Sandals', price: 110, image:"images/sandals.png" },
+            { name: 'Sandal 2', category: 'Sandals', price: 68, image:"images/sandal2.png" },
+            { name: 'Sandal 3', category: 'Sandals', price: 78, image:"images/sandal3.png" },
+            { name: 'Sandal 4', category: 'Sandals', price: 88, image:"images/sandal4.png" },
+        ];
+
+        function displayProducts(productsArray) {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = ''; // Clears the existing content
+
+            productsArray.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                    <p>Category: ${product.category}</p>
+                    <p>Price: $${product.price}</p>
+                    <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+                `;
+                gallery.appendChild(productCard);
+            });
+        }
+
+        function addToCart(productName, productPrice) {
+            // Cart operations can be performed here
+            console.log(`${productName} added to cart. Price: $${productPrice}`);
+        }
+
+        displayProducts(products);
+
+        const showAllButton = document.getElementById('showAllButton');
+        showAllButton.addEventListener('click', () => {
+            displayProducts(products);
+        });
+
+        const sneakersButton = document.getElementById('sneakersButton');
+        sneakersButton.addEventListener('click', () => {
+            const sneakers = products.filter(product => product.category === 'Sneakers');
+            displayProducts(sneakers);
+        });
+
+        const bootsButton = document.getElementById('bootsButton');
+        bootsButton.addEventListener('click', () => {
+            const boots = products.filter(product => product.category === 'Boots');
+            displayProducts(boots);
+        });
+
+        const sandalsButton = document.getElementById('sandalsButton');
+        sandalsButton.addEventListener('click', () => {
+            const sandals = products.filter(product => product.category === 'Sandals');
+            displayProducts(sandals);
+        });
+
+        const sortByNameButton = document.getElementById('sortByNameButton');
+        sortByNameButton.addEventListener('click', () => {
+            const sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name));
+            displayProducts(sortedProducts);
+        });
+
+        const sortByPriceButton = document.getElementById('sortByPriceButton');
+        sortByPriceButton.addEventListener('click', () => {
+            const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+            displayProducts(sortedProducts);
+        });
+    </script>
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
 </html>
+

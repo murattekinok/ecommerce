@@ -14,7 +14,6 @@ const App = () => {
       <img src='images/boot2.png' alt="" />
       <Features/>
       <Footer/>
-        
     </div>
   );
 };
