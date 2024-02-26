@@ -4,7 +4,7 @@
 }
 
 #logo {
-  width: 1%; /* Logo genişliği %100 olacak şekilde ayarlandı */
+  width: 30px; /* Logo genişliği */
   height: auto; /* Oranları korumak için */
 }
 
@@ -62,17 +62,4 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-/* Diğer stil tanımlamaları eklenebilir */
-
-/* Eklenen stil tanımlamaları */
-#logo-container {
-  max-width: 30px; /* Logo maksimum genişlik */
-  margin: 10px; /* Logo kenar boşluğu */
-}
-
-#logo {
-  width: 10%; /* Logo genişliği %100 olacak şekilde ayarlandı */
-  height: auto; /* Oranları korumak için */
 }
