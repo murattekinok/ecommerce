@@ -14,6 +14,11 @@
     box-sizing: border-box; /* Kenarlık ve dolgu dahil kutu boyutunu hesaplar */
 }
 
+img {
+    width: 640px;
+    height: 426px;
+  }
+
 @media screen and (max-width: 768px) {
     .product-card {
         width: calc(50% - 20px); /* Küçük ekranlarda iki sütuna geçiş */
