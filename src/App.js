@@ -11,7 +11,8 @@ const App = () => {
     <div>
       <Header />
       <Main/>
-      <img src='images/boot2.png' alt="" />
+      <a href="/learn-react">Learn React</a> {/* Yeni eklenen bağlantı */}
+      <img src='/images/boot2.png' alt="" />
       <Features/>
       <Footer/>
     </div>

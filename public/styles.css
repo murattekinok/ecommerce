@@ -8,21 +8,22 @@
     padding: 10px;
     margin: 10px;
     text-align: center;
-    flex: 1 1 calc(33.333% - 20px); /* Ürün kartlarının yatay düzeni */
+    width: calc(33.333% - 20px); /* Ürün kartlarının genişliği */
     max-width: calc(33.333% - 20px); /* Ürün kartlarının maksimum genişliği */
+    height: 3cm; /* Ürün kartlarının yüksekliği */
     box-sizing: border-box; /* Kenarlık ve dolgu dahil kutu boyutunu hesaplar */
 }
 
 @media screen and (max-width: 768px) {
     .product-card {
-        flex: 1 1 calc(50% - 20px); /* Küçük ekranlarda iki sütuna geçiş */
+        width: calc(50% - 20px); /* Küçük ekranlarda iki sütuna geçiş */
         max-width: calc(50% - 20px);
     }
 }
 
 @media screen and (max-width: 480px) {
     .product-card {
-        flex: 1 1 calc(100% - 20px); /* Daha küçük ekranlarda tek sütun */
+        width: calc(100% - 20px); /* Daha küçük ekranlarda tek sütun */
         max-width: calc(100% - 20px);
     }
 }
